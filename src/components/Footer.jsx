@@ -25,15 +25,17 @@ export default function Footer() {
         }}>
           {/* Brand */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <Link to="/" style={{
-              fontFamily: 'Space Grotesk, sans-serif',
-              fontSize: '1.5rem',
-              fontWeight: 700,
-              color: 'var(--on-surface)',
-              textDecoration: 'none',
-              letterSpacing: '-0.05em',
-            }}>
-              GTOS
+            <Link to="/" style={{ textDecoration: 'none', display: 'inline-block' }}>
+              <img
+                src="/gtos-logo.png"
+                alt="GTOS — Global Trust Operating System"
+                style={{
+                  height: '56px',
+                  width: 'auto',
+                  objectFit: 'contain',
+                  filter: 'drop-shadow(0 0 8px rgba(173,198,255,0.35))',
+                }}
+              />
             </Link>
             <p style={{ color: 'rgba(229,226,227,0.4)', fontSize: '0.8rem', fontFamily: 'Inter, sans-serif', maxWidth: '260px', lineHeight: 1.6 }}>
               Global Trust Operating System — making hardware security verifiable, not assumed.

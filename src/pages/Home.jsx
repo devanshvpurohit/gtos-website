@@ -188,14 +188,19 @@ export default function Home() {
                   alignItems: 'center',
                   justifyContent: 'center',
                   boxShadow: '0 0 60px rgba(173,198,255,0.3)',
+                  overflow: 'hidden',
+                  padding: '1.5rem',
                 }}>
-                  <span className="material-symbols-outlined" style={{
-                    fontSize: '6rem',
-                    color: 'white',
-                    fontVariationSettings: "'FILL' 1",
-                  }}>
-                    shield_with_heart
-                  </span>
+                  <img
+                    src="/gtos-logo.png"
+                    alt="GTOS Logo"
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'contain',
+                      filter: 'drop-shadow(0 0 10px rgba(173,198,255,0.5))',
+                    }}
+                  />
                 </div>
               </div>
 

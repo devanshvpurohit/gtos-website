@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
+const LOGO = '/gtos-logo.png'
+
 const navLinks = [
   { to: '/problem', label: 'Problem' },
   { to: '/vision', label: 'Vision' },
@@ -53,15 +55,23 @@ export default function Navbar() {
         <Link
           to="/"
           style={{
-            fontFamily: 'Space Grotesk, sans-serif',
-            fontSize: '1.5rem',
-            fontWeight: 700,
-            letterSpacing: '-0.05em',
-            color: 'var(--on-surface)',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.5rem',
             textDecoration: 'none',
+            flexShrink: 0,
           }}
         >
-          GTOS
+          <img
+            src={LOGO}
+            alt="GTOS Logo"
+            style={{
+              height: '40px',
+              width: 'auto',
+              objectFit: 'contain',
+              filter: 'drop-shadow(0 0 6px rgba(173,198,255,0.4))',
+            }}
+          />
         </Link>
 
         {/* Desktop Links */}
