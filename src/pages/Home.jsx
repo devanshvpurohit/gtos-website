@@ -163,10 +163,10 @@ export default function Home() {
           <div style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <div className="threed-object-wrap" style={{ position: 'relative', width: '100%', maxWidth: '500px', aspectRatio: '1' }}>
               {/* Outer glow */}
-              <div style={{
+               <div style={{
                 position: 'absolute',
                 inset: 0,
-                background: 'rgba(77,142,255,0.15)',
+                background: 'rgba(0,210,255,0.1)',
                 filter: 'blur(100px)',
                 borderRadius: '50%',
               }} className="animate-pulse-slow" />
@@ -182,12 +182,12 @@ export default function Home() {
                 <div className="glass-3d" style={{
                   position: 'absolute',
                   inset: 0,
-                  background: 'linear-gradient(135deg, rgba(173,198,255,0.3), rgba(221,183,255,0.2))',
+                  background: 'linear-gradient(135deg, rgba(0,210,255,0.2), rgba(58,123,213,0.15))',
                   borderRadius: '1.25rem',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  boxShadow: '0 0 60px rgba(173,198,255,0.3)',
+                  boxShadow: '0 0 60px rgba(0,210,255,0.25)',
                   overflow: 'hidden',
                   padding: '1.5rem',
                 }}>
@@ -198,7 +198,7 @@ export default function Home() {
                       width: '100%',
                       height: '100%',
                       objectFit: 'contain',
-                      filter: 'drop-shadow(0 0 10px rgba(173,198,255,0.5))',
+                      filter: 'drop-shadow(0 0 10px rgba(0,210,255,0.4))',
                     }}
                   />
                 </div>
@@ -210,7 +210,7 @@ export default function Home() {
                 top: '50%', left: '50%',
                 width: '320px', height: '320px',
                 marginTop: '-160px', marginLeft: '-160px',
-                border: '2px solid rgba(173,198,255,0.2)',
+                border: '2px solid rgba(0,210,255,0.15)',
                 borderRadius: '50%',
               }} className="animate-spin-slow" />
               <div style={{
@@ -218,7 +218,7 @@ export default function Home() {
                 top: '50%', left: '50%',
                 width: '240px', height: '240px',
                 marginTop: '-120px', marginLeft: '-120px',
-                border: '1px solid rgba(221,183,255,0.25)',
+                border: '1px solid rgba(58,123,213,0.2)',
                 borderRadius: '50%',
               }} className="animate-spin-reverse" />
 
@@ -228,14 +228,14 @@ export default function Home() {
                 width: '16px', height: '16px',
                 background: 'var(--primary)',
                 borderRadius: '4px',
-                boxShadow: '0 0 20px rgba(173,198,255,0.8)',
+                boxShadow: '0 0 20px var(--primary)',
               }} className="animate-float" />
               <div style={{
                 position: 'absolute', top: '55%', right: '8%',
                 width: '12px', height: '12px',
                 background: 'var(--secondary)',
                 borderRadius: '4px',
-                boxShadow: '0 0 20px rgba(221,183,255,0.8)',
+                boxShadow: '0 0 20px var(--secondary)',
                 animationDelay: '2s',
               }} className="animate-float" />
               <div style={{
