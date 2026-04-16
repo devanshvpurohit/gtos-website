@@ -31,9 +31,11 @@ export default function Footer() {
                 alt="GTOS — Global Trust Operating System"
                 style={{
                   height: '56px',
-                  width: 'auto',
-                  objectFit: 'contain',
+                  width: '56px',
+                  objectFit: 'cover',
+                  borderRadius: '50%',
                   filter: 'drop-shadow(0 0 8px rgba(173,198,255,0.35))',
+                  border: '1px solid rgba(0,210,255,0.2)',
                 }}
               />
             </Link>

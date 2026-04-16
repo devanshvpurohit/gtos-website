@@ -219,9 +219,9 @@ export default function Home() {
                     alt="GTOS Logo"
                     style={{
                       width: '100%',
-                      height: 'auto',
-                      maxHeight: '100%',
-                      objectFit: 'contain',
+                      height: '100%',
+                      objectFit: 'cover',
+                      borderRadius: '50%',
                       filter: 'drop-shadow(0 0 30px rgba(0,210,255,0.4))',
                     }}
                   />

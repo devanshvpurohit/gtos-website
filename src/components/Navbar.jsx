@@ -67,9 +67,11 @@ export default function Navbar() {
             alt="GTOS Logo"
             style={{
               height: '40px',
-              width: 'auto',
-              objectFit: 'contain',
+              width: '40px',
+              objectFit: 'cover',
+              borderRadius: '50%',
               filter: 'drop-shadow(0 0 6px rgba(173,198,255,0.4))',
+              border: '1px solid rgba(0,210,255,0.2)',
             }}
           />
         </Link>
