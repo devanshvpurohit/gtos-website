@@ -182,23 +182,25 @@ export default function Home() {
                 <div className="glass-3d" style={{
                   position: 'absolute',
                   inset: 0,
-                  background: 'linear-gradient(135deg, rgba(0,210,255,0.2), rgba(58,123,213,0.15))',
+                  background: 'linear-gradient(135deg, rgba(0,210,255,0.15), rgba(58,123,213,0.1))',
                   borderRadius: '1.25rem',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  boxShadow: '0 0 60px rgba(0,210,255,0.25)',
+                  boxShadow: '0 0 40px rgba(0,210,255,0.15)',
+                  border: '1px solid rgba(0,210,255,0.2)',
                   overflow: 'hidden',
-                  padding: '1.5rem',
+                  padding: '2rem',
                 }}>
                   <img
                     src="/gtos-logo.png"
                     alt="GTOS Logo"
                     style={{
-                      width: '100%',
-                      height: '100%',
+                      width: '85%',
+                      height: 'auto',
+                      maxHeight: '80%',
                       objectFit: 'contain',
-                      filter: 'drop-shadow(0 0 10px rgba(0,210,255,0.4))',
+                      filter: 'drop-shadow(0 0 15px rgba(0,210,255,0.3))',
                     }}
                   />
                 </div>
