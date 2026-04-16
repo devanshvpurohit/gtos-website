@@ -3,9 +3,25 @@ import { useEffect, useRef } from 'react'
 
 export default function Home() {
   const heroRef = useRef(null)
+  const visualRef = useRef(null)
 
   useEffect(() => {
     document.title = 'GTOS | Global Trust Operating System'
+
+    const handleMouseMove = (e) => {
+      if (!visualRef.current) return
+      
+      const { clientX, clientY } = e
+      const { innerWidth, innerHeight } = window
+      
+      const moveX = (clientX - innerWidth / 2) / innerWidth * 15
+      const moveY = (clientY - innerHeight / 2) / innerHeight * 15
+      
+      visualRef.current.style.transform = `rotateY(${moveX}deg) rotateX(${-moveY}deg)`
+    }
+
+    window.addEventListener('mousemove', handleMouseMove)
+    return () => window.removeEventListener('mousemove', handleMouseMove)
   }, [])
 
   return (
@@ -161,7 +177,18 @@ export default function Home() {
 
           {/* 3D Visual Side */}
           <div style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <div className="threed-object-wrap" style={{ position: 'relative', width: '100%', maxWidth: '500px', aspectRatio: '1' }}>
+            <div 
+              ref={visualRef}
+              className="threed-object-wrap" 
+              style={{ 
+                position: 'relative', 
+                width: '100%', 
+                maxWidth: '500px', 
+                aspectRatio: '1',
+                transition: 'transform 0.1s ease-out',
+                transformStyle: 'preserve-3d'
+              }}
+            >
               {/* Outer glow */}
                <div style={{
                 position: 'absolute',
@@ -171,12 +198,12 @@ export default function Home() {
                 borderRadius: '50%',
               }} className="animate-pulse-slow" />
 
-              {/* Monolith */}
-              <div className="monolith" style={{
+              {/* Monolith / Logo Wrapper */}
+              <div style={{
                 position: 'absolute',
                 top: '50%', left: '50%',
                 transform: 'translate(-50%, -50%)',
-                width: '200px', height: '320px',
+                width: '240px', height: '240px',
                 zIndex: 20,
               }}>
                 <div style={{
