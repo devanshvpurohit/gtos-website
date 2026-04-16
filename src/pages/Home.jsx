@@ -179,28 +179,23 @@ export default function Home() {
                 width: '200px', height: '320px',
                 zIndex: 20,
               }}>
-                <div className="glass-3d" style={{
+                <div style={{
                   position: 'absolute',
                   inset: 0,
-                  background: 'linear-gradient(135deg, rgba(0,210,255,0.15), rgba(58,123,213,0.1))',
-                  borderRadius: '1.25rem',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  boxShadow: '0 0 40px rgba(0,210,255,0.15)',
-                  border: '1px solid rgba(0,210,255,0.2)',
                   overflow: 'hidden',
-                  padding: '2rem',
                 }}>
                   <img
                     src="/gtos-logo.png"
                     alt="GTOS Logo"
                     style={{
-                      width: '85%',
+                      width: '100%',
                       height: 'auto',
-                      maxHeight: '80%',
+                      maxHeight: '100%',
                       objectFit: 'contain',
-                      filter: 'drop-shadow(0 0 15px rgba(0,210,255,0.3))',
+                      filter: 'drop-shadow(0 0 30px rgba(0,210,255,0.4))',
                     }}
                   />
                 </div>
