@@ -185,7 +185,7 @@ export default function Home() {
                 width: '100%', 
                 maxWidth: '500px', 
                 aspectRatio: '1',
-                transition: 'transform 0.1s ease-out',
+                transition: 'transform 0.15s cubic-bezier(0.2, 0, 0.2, 1)',
                 transformStyle: 'preserve-3d'
               }}
             >
@@ -193,7 +193,7 @@ export default function Home() {
                <div style={{
                 position: 'absolute',
                 inset: 0,
-                background: 'rgba(0,210,255,0.1)',
+                background: 'rgba(0,210,255,0.15)',
                 filter: 'blur(100px)',
                 borderRadius: '50%',
               }} className="animate-pulse-slow" />
@@ -202,7 +202,7 @@ export default function Home() {
               <div style={{
                 position: 'absolute',
                 top: '50%', left: '50%',
-                transform: 'translate(-50%, -50%)',
+                transform: 'translate(-50%, -50%) translateZ(40px)',
                 width: '240px', height: '240px',
                 zIndex: 20,
               }}>
@@ -213,6 +213,8 @@ export default function Home() {
                   alignItems: 'center',
                   justifyContent: 'center',
                   overflow: 'hidden',
+                  borderRadius: '50%',
+                  boxShadow: '0 0 50px rgba(0,210,255,0.2)',
                 }}>
                   <img
                     src="/gtos-logo.png"
@@ -225,10 +227,18 @@ export default function Home() {
                       filter: 'drop-shadow(0 0 30px rgba(0,210,255,0.4))',
                     }}
                   />
+                  {/* Glass Shimmer Refinement */}
+                  <div style={{
+                    position: 'absolute',
+                    inset: 0,
+                    background: 'linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 50%, rgba(255,255,255,0.05) 100%)',
+                    pointerEvents: 'none',
+                    borderRadius: '50%',
+                  }} />
                 </div>
               </div>
 
-              {/* Orbiting rings */}
+              {/* Orbiting rings - Gyroscope offset */}
               <div style={{
                 position: 'absolute',
                 top: '50%', left: '50%',
@@ -236,6 +246,7 @@ export default function Home() {
                 marginTop: '-160px', marginLeft: '-160px',
                 border: '2px solid rgba(0,210,255,0.15)',
                 borderRadius: '50%',
+                transform: 'translateZ(-20px)',
               }} className="animate-spin-slow" />
               <div style={{
                 position: 'absolute',
@@ -244,6 +255,7 @@ export default function Home() {
                 marginTop: '-120px', marginLeft: '-120px',
                 border: '1px solid rgba(58,123,213,0.2)',
                 borderRadius: '50%',
+                transform: 'translateZ(20px)',
               }} className="animate-spin-reverse" />
 
               {/* Floating data bits */}
